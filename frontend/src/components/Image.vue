@@ -12,13 +12,10 @@ export default {
     imageSrc: Object,
   },
   setup(props, { emit }) {
-    function getImgUrl(pic) {
-      return require("../assets/gallery/" + pic);
-    }
     function handleDelete(item) {
       emit("myEvent", item);
     }
-    return { getImgUrl, handleDelete };
+    return { handleDelete };
   },
 };
 </script>
